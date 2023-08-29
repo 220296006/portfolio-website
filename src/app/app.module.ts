@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ResumeComponent } from './components/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     HomeComponent,
     NavComponent,
     AboutMeComponent,
-    EducationComponent
+    EducationComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
