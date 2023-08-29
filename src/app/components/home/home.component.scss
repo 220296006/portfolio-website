@@ -26,13 +26,13 @@
   transition: opacity 0.25s;
 }
 
-.image-overlay--blur {
-  backdrop-filter: blur(5px);
-}
+// .image-overlay--blur {
+//   backdrop-filter: blur(5px);
+// }
 
-.image-overlay--primary {
-  background: #009578;
-}
+// .image-overlay--primary {
+//   background: #009578;
+// }
 
 .image-overlay > * {
   transform: translateY(20px);
