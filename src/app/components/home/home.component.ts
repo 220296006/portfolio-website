@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit{
 
-const typed = document.querySelector('.typed') as HTMLElement | null;
+ typed = document.querySelector('.typed') as HTMLElement | null;
 
 if (typed) {
   let typed_strings = typed.getAttribute('data-typed-items') || '';
