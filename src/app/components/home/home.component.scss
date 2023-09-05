@@ -1,64 +1,13 @@
-/*--------------------------------------------------------------
-# Image
---------------------------------------------------------------*/
-// .image {
-//   position: relative;
-//   width: 650px;
-// }
-
-// .image-img {
-//   display: block;
-//   position: 100%;
-//   width: 650px;
-// }
-
-// .image-overlay {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background: rgba($color: #000000, $alpha: 0.6);
-//   color: #ffffff;
-//   font-family: "Quicksand", sans-serif;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   opacity: 0;
-//   transition: opacity 0.25s;
-// }
-
-
-// .image-overlay > * {
-//   transform: translateY(20px);
-//   transition: transform 0.25s;
-// }
-
-// .image-overlay:hover {
-//   opacity: 1;
-// }
-
-// .image-overlay:hover > * {
-//   transform: translateY(0);
-// }
-
-// .image-title {
-//   font-size: 2em;
-//   font-weight: bold;
-// }
-
-// .image-description {
-//   font-size: 1.25em;
-//   margin-top: 0.25em;
-// }
+/* Apply styles to the whole section */
 #image {
-  width: 50%;
-  height: 50vh;
-  background-size: cover;
-  position: relative; /* Add this to make sure the overlay is positioned relative to the image */
+  width: 100%;
+  height: 100vh;
+  //background: url('assets/images/Thabiso.jpg') top center;
+  //background-size: cover;
+  position: relative; /* Added position:relative to #image */
 }
 
+/* Style the overlay container */
 #image:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);
@@ -70,30 +19,34 @@
   z-index: 1;
 }
 
-#image .image-overlay {
+/* Style the content container */
+#image .image-container {
   position: relative;
   z-index: 2;
   min-width: 300px;
-  text-align: center; /* Center the text horizontally */
-  padding: 20px; /* Add padding for better readability */
+  text-align: center;
+  padding: 60px; /* Increased padding for better readability */
 }
 
-#image-title {
+/* Style the title */
+#image h1 {
   margin: 0 0 10px 0;
-  font-size: 64px;
+  font-size: 59px;
   font-weight: 700;
-  line-height: 1.2; /* Adjust line height for better spacing */
+  line-height: 56px;
   color: #fff;
 }
 
+/* Style the paragraph text */
 #image p {
   color: #fff;
-  margin-bottom: 50px;
+  margin-bottom: 50px; /* Reduced margin for better spacing */
   font-size: 26px;
   font-family: "Poppins", sans-serif;
 }
 
-#image p span {
+/* Style the typed text */
+#image p span.typed {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;

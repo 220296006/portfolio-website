@@ -1,41 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-  </head>
-  <body>
-    <!-- Image Start -->
-    <div class="image" class="d-flex flex-column justify-content-center align-items-center">
-      <img class="image-img" src="assets/images/Shaun.jpg" alt="Thabiso Matsaba Photo" />
-      <div class="image-overlay" data-aos="fade-in">
-        <div class="image-title">Thabiso Matsaba</div>
-        <p>I'm <span class="typed" data-typed-items=" Developer, Freelancer, Gamer"></span></p>
-      </div>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <!-- Typed.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+  <!-- Image Start -->
+  <section id="image" >
+    <img src="assets/images/Thabiso.jfif" alt="Thabiso Matsaba Photo" />
+    <div class="image-container" data-aos="fade-in">
+      <h1>Thabiso Matsaba</h1>
+      <p>I'm <span class="typed" data-typed-items=" a Software Developer, a Tech Guru, a Gamer"></span></p>
     </div>
+  </section>
+</body>
 
-    <!-- Typed.js Library -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-    <!-- TypeScript Code -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const typed = document.querySelector('.typed');
-
-        if (typed) {
-          let typed_strings = typed.getAttribute('data-typed-items') || '';
-          typed_strings = typed_strings.split(',');
-
-          new Typed('.typed', {
-            strings: typed_strings,
-            loop: true,
-            typeSpeed: 100,
-            backSpeed: 50,
-            backDelay: 2000,
-          });
-        }
-      });
-    </script>
-  </body>
 </html>
