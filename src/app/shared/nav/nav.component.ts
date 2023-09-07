@@ -15,7 +15,7 @@ export class NavComponent implements OnInit{
     // Implement your scroll logic here
     const scrollPosition = window.scrollY;
 
-    if (scrollPosition >= 200) {
+    if (scrollPosition >= 300) {
       this.activateNavLink('/home');
       // Add other navigation link activations as needed
     }
