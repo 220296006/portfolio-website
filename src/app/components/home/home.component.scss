@@ -2,13 +2,12 @@
 #image {
   width: 100%;
   height: 100vh;
-  //background: url('assets/images/Thabiso.jpg') top center;
-  //background-size: cover;
-  position: relative; /* Added position:relative to #image */
+  background-size: cover;
+  position: relative;
 }
 
 /* Style the overlay container */
-#image:before {
+#image::before {
   content: "";
   background: rgba(5, 13, 24, 0.3);
   position: absolute;
@@ -22,8 +21,8 @@
 /* Style the content container */
 #image .image-container {
   position: relative;
-  z-index: 2;
-  min-width: 300px;
+  z-index: 6;
+  min-width: 100px;
   text-align: center;
   padding: 60px; /* Increased padding for better readability */
 }
@@ -51,4 +50,23 @@
   padding-bottom: 4px;
   letter-spacing: 1px;
   border-bottom: 3px solid #149ddd;
+}
+
+@media (min-width: 1024px) {
+  #image {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #image h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #image h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
 }

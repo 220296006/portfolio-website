@@ -1,0 +1,23 @@
+/* Apply styles to the whole navigation bar */
+.navbar {
+    background-color: #f8f9fa; /* Set the background color */
+}
+
+/* Style the icons and text inside the navigation bar */
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.navbar-nav .nav-item a {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    text-decoration: none; /* Remove underlines from links */
+    color: #333; /* Set text color */
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+}
+
+/* Style the mat-icon */
+.navbar-nav .nav-item mat-icon {
+    margin-right: 0.25rem; /* Adjust spacing between icon and text */
+}
