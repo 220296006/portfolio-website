@@ -1,58 +1,72 @@
-.image {
+/* Apply styles to the whole section */
+#image {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
   position: relative;
-  width: 650px;
 }
 
-.image-img {
-  display: block;
-  position: 100%;
-  width: 650px;
-}
-
-.image-overlay {
+/* Style the overlay container */
+#image::before {
+  content: "";
+  background: rgba(5, 13, 24, 0.3);
   position: absolute;
+  bottom: 0;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba($color: #000000, $alpha: 0.6);
-  color: #ffffff;
-  font-family: "Quicksand", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.25s;
+  right: 0;
+  z-index: 1;
 }
 
-// .image-overlay--blur {
-//   backdrop-filter: blur(5px);
-// }
-
-// .image-overlay--primary {
-//   background: #009578;
-// }
-
-.image-overlay > * {
-  transform: translateY(20px);
-  transition: transform 0.25s;
+/* Style the content container */
+#image .image-container {
+  position: relative;
+  z-index: 6;
+  min-width: 100px;
+  text-align: center;
+  padding: 60px; /* Increased padding for better readability */
 }
 
-.image-overlay:hover {
-  opacity: 1;
+/* Style the title */
+#image h1 {
+  margin: 0 0 10px 0;
+  font-size: 59px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
 }
 
-.image-overlay:hover > * {
-  transform: translateY(0);
+/* Style the paragraph text */
+#image p {
+  color: #fff;
+  margin-bottom: 50px; /* Reduced margin for better spacing */
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
 }
 
-.image-title {
-  font-size: 2em;
-  font-weight: bold;
+/* Style the typed text */
+#image p span.typed {
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
 }
 
-.image-description {
-  font-size: 1.25em;
-  margin-top: 0.25em;
+@media (min-width: 1024px) {
+  #image {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #image h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #image h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
 }
