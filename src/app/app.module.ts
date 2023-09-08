@@ -14,7 +14,6 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './shared/components/login/login.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    FontAwesomeModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
