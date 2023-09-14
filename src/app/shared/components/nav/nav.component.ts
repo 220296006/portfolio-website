@@ -12,26 +12,18 @@ export class NavComponent implements OnInit{
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
-    // Implement your scroll logic here
     const scrollPosition = window.scrollY;
 
-    if (scrollPosition >= 300) {
-      this.activateNavLink('/home');
-      // Add other navigation link activations as needed
+    // Adjust the scroll threshold as needed
+    const scrollThreshold = 200;
+
+    if (scrollPosition >= scrollThreshold) {
+      // Add a class to the navigation bar when scrolling
+      document.querySelector('.navbar')?.classList.add('scrolled');
+    } else {
+      // Remove the class when scrolling back to the top
+      document.querySelector('.navbar')?.classList.remove('scrolled');
     }
-  }
-
-  activateNavLink(route: string): void {
-    this.router.events.subscribe(() => {
-      const currentRoute = this.router.url;
-      if (currentRoute === route) {
-        // Mark the navigation link as active here
-      }
-    });
-  }
-
-  isNavLinkActive(route: string): boolean {
-    return this.router.url === route;
   }
 
   // Add other component logic here
