@@ -8,7 +8,7 @@
   <!-- Navigation Bar -->
 
   <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg"  [ngClass]="{'sticky': isSticky}">
       <div class="container-fluid">
         <a class="navbar-brand" href="home">
           <img
@@ -25,14 +25,13 @@
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/home" [class.active]="isNavLinkActive('/home')">
+              <a class="nav-link active" aria-current="page" href="/home">
                 <mat-icon
                   aria-hidden="false"
                   aria-label="home icon"
