@@ -1,75 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation</title>
+  </head>
+  <!-- Navigation Bar -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navigation</title>
-</head>
-<!-- Navigation Bar -->
-
-<body>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="home">
-        <img src="assets/images/Shaun.jpg" alt="Logo-Image" width="60" height="64" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/home">
-              <mat-icon aria-hidden="false" aria-label="home icon" fontIcon="home"></mat-icon>
-              Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about-me">
-              <mat-icon aria-hidden="false" aria-label="account_circle icon"
-                fontIcon="account_circle"></mat-icon>About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/resume">
-              <mat-icon aria-hidden="false" aria-label="assignment icon " fontIcon="assignment"></mat-icon>Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/education">
-              <mat-icon aria-hidden="false" aria-label="school icon" fontIcon="school"></mat-icon>Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/services">
-              <mat-icon aria-hidden="false" aria-label="build icon" fontIcon="build"></mat-icon>Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/portfolio">
-              <mat-icon aria-hidden="false" aria-label="folder icon" fontIcon="folder"></mat-icon>Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">
-              <mat-icon aria-hidden="false" aria-label="contact_page icon"
-                fontIcon="contact_page"></mat-icon>Contact</a>
-          </li>
+  <body>
+    <nav class="navbar navbar-expand-lg"  [ngClass]="{'sticky': isSticky}">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home">
+          <img
+            src="assets/images/Shaun.jpg"
+            alt="Logo-Image"
+            width="60"
+            height="64"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/home"  [ngClass]="{'sticky': isSticky}">
+                <mat-icon
+                  aria-hidden="false"
+                  aria-label="home icon"
+                  fontIcon="home"
+                ></mat-icon>
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about-me">
+                <mat-icon
+                  aria-hidden="false"
+                  aria-label="account_circle icon"
+                  fontIcon="account_circle"
+                ></mat-icon
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/resume">
+                <mat-icon
+                  aria-hidden="false"
+                  aria-label="assignment icon "
+                  fontIcon="assignment"
+                ></mat-icon
+                >Resume</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/education">
+                <mat-icon
+                  aria-hidden="false"
+                  aria-label="school icon"
+                  fontIcon="school"
+                ></mat-icon
+                >Education</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services">
+                <mat-icon
+                  aria-hidden="false"
+                  aria-label="build icon"
+                  fontIcon="build"
+                ></mat-icon
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/portfolio">
+                <mat-icon
+                  aria-hidden="false"
+                  aria-label="folder icon"
+                  fontIcon="folder"
+                ></mat-icon
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">
+                <mat-icon
+                  aria-hidden="false"
+                  aria-label="contact_page icon"
+                  fontIcon="contact_page"
+                ></mat-icon
+                >Contact</a
+              >
+            </li>
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
             <button class="btn btn-outline-success" type="submit">
               Search
             </button>
           </form>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="#">Logout</a></li>
             </ul>
           </li>
         </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-</body>
-
+    </nav>
+  </body>
 </html>

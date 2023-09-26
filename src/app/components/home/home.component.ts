@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import Typed from 'typed.js';
 
 @Component({
@@ -7,7 +7,7 @@ import Typed from 'typed.js';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(private elementRef: ElementRef) {}
 
   ngOnInit(): void {
     const typedElement = document.querySelector('.typed') as HTMLElement | null;
@@ -24,5 +24,13 @@ export class HomeComponent implements OnInit {
         loop: true,
       });
     }
+  }
+
+  scrollToAbout() {
+    // Get a reference to the About section by its id
+    const aboutSection = this.elementRef.nativeElement.querySelector('#about-me');
+
+    // Scroll to the About section
+    aboutSection.scrollIntoView({ behavior: 'smooth' });
   }
 }
