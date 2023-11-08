@@ -13,8 +13,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './shared/components/login/login.component';
 import { NavComponent } from './shared/components/nav/nav.component';
-import { PortfolioDetailsPharmacyappComponent } from './components/portfolio-details-pharmacyapp/portfolio-details-pharmacyapp.component';
-import { PortfolioDetailsTheebestprojectComponent } from './components/portfolio-details-theebestproject/portfolio-details-theebestproject.component';
+import { PortfolioDetailsPharmacyappComponent } from './components/portfolio-pharmacyapp/portfolio-details-pharmacyapp.component';
+import { PortfolioDetailsTheebestprojectComponent } from './components/portfolio-theebestproject/portfolio-details-theebestproject.component';
 
 @NgModule({
   declarations: [

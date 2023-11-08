@@ -7,8 +7,8 @@ import { ResumeComponent } from './components/resume/resume.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { NavComponent } from './shared/components/nav/nav.component';
-import { PortfolioDetailsPharmacyappComponent } from './components/portfolio-details-pharmacyapp/portfolio-details-pharmacyapp.component';
-import { PortfolioDetailsTheebestprojectComponent } from './components/portfolio-details-theebestproject/portfolio-details-theebestproject.component';
+import { PortfolioDetailsPharmacyappComponent } from './components/portfolio-pharmacyapp/portfolio-details-pharmacyapp.component';
+import { PortfolioDetailsTheebestprojectComponent } from './components/portfolio-theebestproject/portfolio-details-theebestproject.component';
 
 const routes: Routes = [
   {path: 'home', pathMatch: 'full', component: HomeComponent},
