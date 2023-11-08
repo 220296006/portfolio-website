@@ -1,0 +1,109 @@
+/*--------------------------------------------------------------
+# Sections & Section Header
+--------------------------------------------------------------*/
+.section-header {
+  padding-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 24px; /* Changed font size */
+  font-weight: 700; /* Changed font weight */
+  margin: 0;
+  text-transform: uppercase;
+  color: #000; /* Changed color */
+  font-family: var(--font-secondary);
+}
+
+.section-header h2::after {
+  content: "";
+  width: 80px; /* Adjusted width */
+  height: 2px; /* Adjusted height and style */
+  display: inline-block;
+  background: #2cbc85; /* Changed color */
+  margin: 4px 10px;
+}
+
+.section-header p {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: var(--font-secondary);
+  color: #111010;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply styles to the page header */
+.page-header {
+  background-color: rgb(115, 133, 131);
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.page-header h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.page-header p {
+  font-size: 18px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #3b9bf3;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Apply styles to the about section */
+.about {
+  padding: 60px 0;
+}
+
+.about h2 {
+  font-size: 28px;
+  text-align: center;
+}
+
+.about img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about p {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.about .content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about ul li {
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.about a {
+  text-decoration: none;
+  color: #3b9bf3;
+}

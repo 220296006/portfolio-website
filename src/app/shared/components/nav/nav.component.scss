@@ -1,0 +1,67 @@
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #f7fcfc;
+    padding: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use Flexbox to center-align items horizontally */
+    justify-content: center; /* Center-align items horizontally */
+  }
+  
+  .navbar-brand img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #3fbbc0;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler:focus {
+    outline: none;
+  }
+  
+  .navbar-nav {
+    margin-top: 10px;
+    display: flex; /* Use Flexbox to center-align items horizontally */
+    justify-content: center; /* Center-align items horizontally */
+  }
+  
+  .navbar-nav .nav-item {
+    margin-right: 15px;
+  }
+  
+  .navbar-nav .nav-item:last-child {
+    margin-right: 0;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #444444;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #3fbbc0;
+  }
+  
+  /* Search Form */
+  .form-control {
+    border: 1px solid #3fbbc0;
+    border-radius: 50px;
+  }
+  
+  .btn-outline-success {
+    border-color: #3fbbc0;
+    color: #3fbbc0;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #3fbbc0;
+    color: #fff;
+  }
+  
