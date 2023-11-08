@@ -7,8 +7,8 @@ import { ResumeComponent } from './components/resume/resume.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { NavComponent } from './shared/components/nav/nav.component';
-import { PortfolioDetailsPharmacyappComponent } from './components/portfolio-pharmacyapp/portfolio-details-pharmacyapp.component';
-import { PortfolioDetailsTheebestprojectComponent } from './components/portfolio-theebestproject/portfolio-details-theebestproject.component';
+import { PortfolioPharmacyappComponent } from './components/portfolio-pharmacyapp/portfolio-pharmacyapp.component';
+import { PortfolioTheebestprojectComponent } from './components/portfolio-theebestproject/portfolio-theebestproject.component';
 
 const routes: Routes = [
   {path: 'home', pathMatch: 'full', component: HomeComponent},
@@ -18,8 +18,8 @@ const routes: Routes = [
   {path: 'resume', pathMatch: 'full', component: ResumeComponent},
   {path: 'contact', pathMatch: 'full', component: ContactComponent},
   {path: 'portfolio', pathMatch: 'full', component: PortfolioComponent},
-  {path: 'portfolio-details-pharmacyapp', pathMatch: 'full', component: PortfolioDetailsPharmacyappComponent},
-  {path: 'portfolio-details-thebestproject', pathMatch: 'full', component: PortfolioDetailsTheebestprojectComponent},
+  {path: 'portfolio-pharmacyapp', pathMatch: 'full', component: PortfolioPharmacyappComponent},
+  {path: 'portfolio-thebestproject', pathMatch: 'full', component: PortfolioTheebestprojectComponent},
 
 ];
 
