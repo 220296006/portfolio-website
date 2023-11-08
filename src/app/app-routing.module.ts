@@ -7,8 +7,8 @@ import { ResumeComponent } from './components/resume/resume.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { NavComponent } from './shared/components/nav/nav.component';
-import { PortfolioPharmacyappComponent } from './components/portfolio-pharmacyapp/portfolio-pharmacyapp.component';
-import { PortfolioTheebestprojectComponent } from './components/portfolio-theebestproject/portfolio-theebestproject.component';
+import { PharmacyappComponent } from './components/pharmacyapp/pharmacyapp.component';
+import { TheebestprojectComponent } from './components/theebestproject/theebestproject.component';
 
 const routes: Routes = [
   {path: 'home', pathMatch: 'full', component: HomeComponent},
@@ -18,8 +18,8 @@ const routes: Routes = [
   {path: 'resume', pathMatch: 'full', component: ResumeComponent},
   {path: 'contact', pathMatch: 'full', component: ContactComponent},
   {path: 'portfolio', pathMatch: 'full', component: PortfolioComponent},
-  {path: 'portfolio-pharmacyapp', pathMatch: 'full', component: PortfolioPharmacyappComponent},
-  {path: 'portfolio-thebestproject', pathMatch: 'full', component: PortfolioTheebestprojectComponent},
+  {path: 'portfolio-pharmacyapp', pathMatch: 'full', component: PharmacyappComponent},
+  {path: 'portfolio-thebestproject', pathMatch: 'full', component: TheebestprojectComponent},
 
 ];
 

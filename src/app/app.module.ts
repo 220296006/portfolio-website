@@ -13,8 +13,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './shared/components/login/login.component';
 import { NavComponent } from './shared/components/nav/nav.component';
-import { PortfolioPharmacyappComponent } from './components/portfolio-pharmacyapp/portfolio-pharmacyapp.component';
-import { PortfolioTheebestprojectComponent } from './components/portfolio-theebestproject/portfolio-theebestproject.component';
+import { PharmacyappComponent } from './components/pharmacyapp/pharmacyapp.component';
+import { TheebestprojectComponent } from './components/theebestproject/theebestproject.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -28,8 +28,8 @@ import { RouterModule } from '@angular/router';
     PortfolioComponent,
     ContactComponent,
     LoginComponent,
-    PortfolioPharmacyappComponent,
-    PortfolioTheebestprojectComponent,
+    PharmacyappComponent,
+    TheebestprojectComponent,
   ],
   imports: [
     BrowserModule,

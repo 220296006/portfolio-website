@@ -2,11 +2,11 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import Swiper from 'swiper';
 
 @Component({
-  selector: 'app-portfolio-details-pharmacyapp',
-  templateUrl: './portfolio-pharmacyapp.component.html',
-  styleUrls: ['./portfolio-pharmacyapp.component.scss']
+  selector: 'app-portfolio-theebestproject',
+  templateUrl: './theebestproject.component.html',
+  styleUrls: ['./theebestproject.component.scss']
 })
-export class PortfolioPharmacyappComponent implements OnInit, AfterViewInit {
+export class TheebestprojectComponent implements OnInit, AfterViewInit {
  
   constructor() { }
 
