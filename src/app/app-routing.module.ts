@@ -9,6 +9,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { NavComponent } from './shared/components/nav/nav.component';
 import { PharmacyappComponent } from './components/pharmacyapp/pharmacyapp.component';
 import { TheebestprojectComponent } from './components/theebestproject/theebestproject.component';
+import { VpbankappComponent } from './components/vpbankapp/vpbankapp.component';
 
 const routes: Routes = [
   {path: 'home', pathMatch: 'full', component: HomeComponent},
@@ -19,8 +20,8 @@ const routes: Routes = [
   {path: 'contact', pathMatch: 'full', component: ContactComponent},
   {path: 'portfolio', pathMatch: 'full', component: PortfolioComponent},
   {path: 'portfolio-pharmacyapp', pathMatch: 'full', component: PharmacyappComponent},
-  {path: 'portfolio-thebestproject', pathMatch: 'full', component: TheebestprojectComponent},
-
+  {path: 'portfolio-theebestproject', pathMatch: 'full', component: TheebestprojectComponent},
+  {path: 'portfolio-vpbankapp', pathMatch: 'full', component: VpbankappComponent}
 ];
 
 @NgModule({

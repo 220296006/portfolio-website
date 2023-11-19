@@ -16,6 +16,7 @@ import { NavComponent } from './shared/components/nav/nav.component';
 import { PharmacyappComponent } from './components/pharmacyapp/pharmacyapp.component';
 import { TheebestprojectComponent } from './components/theebestproject/theebestproject.component';
 import { RouterModule } from '@angular/router';
+import { VpbankappComponent } from './components/vpbankapp/vpbankapp.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { RouterModule } from '@angular/router';
     LoginComponent,
     PharmacyappComponent,
     TheebestprojectComponent,
+    VpbankappComponent,
   ],
   imports: [
     BrowserModule,

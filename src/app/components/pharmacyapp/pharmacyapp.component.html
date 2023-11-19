@@ -15,7 +15,7 @@
                 <h2>Portfolio Details</h2>
                 <ol>
                     <li><a [routerLink]="['/home']">Home</a></li>
-                    <li>Portfolio Details</li>
+                    <li><a [routerLink]="['/portfolio']">Portfolio</a></li>
                 </ol>
             </div>
         </div>
@@ -53,101 +53,99 @@
                     </div>
                     <div class="portfolio-description">
                         <h2>Pharmacy App</h2>
-                        <p>
-                            1. Technology Stack
-                            The Pharmacy App utilizes the following technology stack:
-
-                            Backend
-
-                            Java 19
-                            Spring Boot framework
-                            MySQL Workbench Relational Database
-                            Lombok for code generation
-                            Spring JDBC for database connectivity
-
-                            Frontend
-
-                            Angular (TypeScript)
-                            Bootstrap for responsive UI design
-                            HTML and CSS (latest versions) for markup and styling
-                        </p>
+                        <b>1. Technology Stack</b>
                         <br>
-                        <p>
-                            2. Functional Requirements
-
-                            The Pharmacy App includes the following functional requirements:
-
-                            User Management
-
-                            Allow users to register and create an account.
-                            Enable users to log in and authenticate securely.
-                            Provide role-based access control to manage user permissions.
-
-                            Customer Management
-
-                            Allow users to add, view, update, and delete customer records.
-                            Capture customer information, including name, contact details, and address.
-                            Associate customers with user accounts for tracking purposes.
-
-                            Inventory Management
-
-                            Provide functionalities to add, view, update, and delete medication inventory.
-                            Capture medication details, including name, description, quantity, and price
-                            Track medication stock levels and provide notifications for low inventory.
-
-                            Prescription Management
-
-                            Enable users to create, view, update, and delete prescriptions.
-                            Capture prescription details, including customer information, doctor's name, and issue
-                            date.
-                            Associate prescriptions with customers for easy reference.
-
-                            Medication Management 
-
-                            Allow users to add, view, update, and delete medications within prescriptions.
-                            Capture medication details, including name, dosage, and frequency.
-                            Track medications associated with specific prescriptions.
-
-                            Invoice Management
-
-                            Provide functionalities to generate and manage customer invoices.
-                            Capture invoice details, including customer information, amount, due date, and payment
-                            status.
-                            Allow users to mark invoices as paid and track payment status.
-                        </p>
+                        <p>The Pharmacy App utilizes the following technology stack:</p>
                         <br>
-                        <p>
-                            3. Non-Functional Requirements
+                        <b>Backend</b>
+                        <br>
+                        <ol>
+                            <li>Java 19</li>
+                            <li>Spring Boot framework</li>
+                            <li>MySQL Workbench Relational Database</li>
+                            <li>ombok for code generation</li>
+                            <li>Spring JDBC for database connectivity</li>
+                        </ol>
+                        <br>
+                        <b>Frontend</b>
+                        <br>
+                        <ol>
+                            <li>Angular (TypeScript)</li>
+                            <li>Bootstrap for responsive UI design</li>
+                            <li>HTML and CSS (latest versions) for markup and styling</li>
+                        </ol>
+                        <br>
+                        <b>2. Functional Requirements</b>
+                        <br>
+                        <p>The Pharmacy App includes the following functional requirements:</p>
+                        <br>
+                        <ul>
+                            <b>User Management</b>
+                                <li>Allow users to register and create an account.</li>
+                                    <li>Enable users to log in and authenticate securely.</li>
+                                        <li>Provide role-based access control to manage user permissions.
+                            </li>
+                            <br>
+                                <b>Customer Management</b>
+                                    <li>Allow users to add, view, update, and delete customer records.</li>
+                                    <li> Capture customer information, including name, contact details, and address.</li>
+                                    <li> Associate customers with user accounts for tracking purposes.
+                                    </li>
+                                  <br>
+                                    <b>Inventory Management</b>
+                                    <li>Provide functionalities to add, view, update, and delete medication inventory.</li>
+                                        <li>  Capture medication details, including name, description, quantity, and price.</li>
+                                            <li>  Track medication stock levels and provide notifications for low inventory.
+                                    </li>
+                                    <br>
+                                    <b>Prescription Management</b>
 
-                            The Pharmacy App includes the following non-functional requirements:
+                                    <li>Enable users to create, view, update, and delete prescriptions.</li>
+                                        <li> Capture prescription details, including customer information, doctor's name, andissuedate.</li>
+                                            <li>Associate prescriptions with customers for easy reference.
+                                    </li>
+                                    <br>
+                                    <b>Medication Management </b>
 
-                            Performance
+                                    <li>Allow users to add, view, update, and delete medications within prescriptions.</li>
+                                        <li> Capture medication details, including name, dosage, and frequency.</li>
+                                            <li> Track medications associated with specific prescriptions.
+                                    </li>
+                                    <br>
+                                    <b>Invoice Management</b>
 
-                            The application should handle a large number of concurrent users without significant
-                            performance degradation.
-                            Database queries should be optimized to ensure fast and efficient data retrieval and
-                            updates.
+                                    <li>Provide functionalities to generate and manage customer invoices.</li>
+                                        <li> Capture invoice details, including customer information, amount, due date, apayment status.</li>
+                                            <li> Allow users to mark invoices as paid and track payment status.
+                                    </li>
+                                </ul>
+                                <br>
+                                <b>3.Non-Functional Requirements</b>
+                                <br>
+                                <p>The Pharmacy App includes the following non-functional requirements:</p>
+                                <ul>
+                                    <b>Performance</b>
+                                    <li>The application should handle a large number of concurrent users withoutsignificant performance degradation.</li>
+                                        <li> Database queries should be optimized to ensure fast and efficient data retrieval and updates.</li>
+                                        <br>
+                                        <b>Security</b>
+                                    <li>User authentication and authorization should be implemented securely using industry best practices.</li>
+                                        <li> User passwords should be stored securely using encryption techniques.</li>
+                                            <li> User sessions should be managed securely to prevent unauthorized access.
+                                    </li>
+                                    <br>
+                                    <b>Usability</b>
 
-                            Security
-
-                            User authentication and authorization should be implemented securely using industry best
-                            practices.
-                            User passwords should be stored securely using encryption techniques.
-                            User sessions should be managed securely to prevent unauthorized access.
-
-                            Usability
-
-                            The user interface should be intuitive and user-friendly.
-                            Proper validation and error handling should be implemented to provide informative feedback
-                            to users.
-                            The application should be responsive and compatible with different devices and screen
-                            sizes.
-
-                            Reliability
-                            The application should be highly reliable and available, with minimal downtime.
-                            Data integrity should be maintained, ensuring accurate and consistent information storage
-                            and retrieval.
-                        </p>
+                                    <li>The user interface should be intuitive and user-friendly.</li>
+                                        <li>Proper validation and error handling should be implemented to provide informative feedback to users.</li>
+                                            <li>The application should be responsive and compatible with different devices andscreensizes.
+                                    </li>
+                                    <br>
+                                    <b>Reliability</b>
+                                    <li>The application should be highly reliable and available, with minimal downtime.</li>
+                                        <li>Data integrity should be maintained, ensuring accurate and consistent informationstorageand retrieval.
+                                </li>
+                                </ul>
                     </div>
                 </div>
             </div>
