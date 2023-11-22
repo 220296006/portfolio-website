@@ -7,10 +7,5 @@ import { ScrollService } from '../../services/scroll.service';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-  constructor(private scrollService: ScrollService) {}
   
-  scrollToSection(sectionId: string): void {
-    this.scrollService.scrollToSection(sectionId);
-  }
-
   }

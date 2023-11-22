@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,31 +7,33 @@ import { Router } from '@angular/router';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent {
+  // @ViewChild('scrollToTopElement') scrollToTopElement: ElementRef;
 
-  private prevScrollPosition = 0;
 
-  constructor(private router: Router) {}
+  // private prevScrollPosition = 0;
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: any): void {
-    const scrollPosition = window.scrollY;
-    const isScrollingDown = scrollPosition > this.prevScrollPosition;
+  // constructor(private router: Router) {}
 
-    if (isScrollingDown && this.isScrollingDownToBottom(scrollPosition)) {
-      this.router.navigate(['/resume']);
-    } else if (!isScrollingDown && this.isScrollingUpToTop(scrollPosition)) {
-      this.router.navigate(['/home']);
-    }
+  // @HostListener('window:scroll', ['$event'])
+  // onScroll(event: any): void {
+  //   const scrollPosition = window.scrollY;
+  //   const isScrollingDown = scrollPosition > this.prevScrollPosition;
 
-    this.prevScrollPosition = scrollPosition;
-  }
+  //   if (isScrollingDown && this.isScrollingDownToBottom(scrollPosition)) {
+  //     this.router.navigate(['/resume']);
+  //   } else if (!isScrollingDown && this.isScrollingUpToTop(scrollPosition)) {
+  //     this.router.navigate(['/home']);
+  //   }
 
-  private isScrollingDownToBottom(scrollPosition: number): boolean {
-    return scrollPosition >= document.body.offsetHeight - window.innerHeight;
-  }
+  //   this.prevScrollPosition = scrollPosition;
+  // }
 
-  private isScrollingUpToTop(scrollPosition: number): boolean {
-    return scrollPosition <= window.innerHeight;
-  }
+  // private isScrollingDownToBottom(scrollPosition: number): boolean {
+  //   return scrollPosition >= document.body.offsetHeight - window.innerHeight;
+  // }
+
+  // private isScrollingUpToTop(scrollPosition: number): boolean {
+  //   return scrollPosition <= window.innerHeight;
+  // }
 
 }

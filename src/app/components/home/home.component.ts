@@ -27,25 +27,25 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  private lastScrollPosition = 0;
+  // private lastScrollPosition = 0;
 
-  constructor(private router: Router) {}
+  // constructor(private router: Router) {}
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: any): void {
-    const scrollPosition = window.scrollY;
-    const isScrollingDown = scrollPosition > this.lastScrollPosition;
+  // @HostListener('window:scroll', ['$event'])
+  // onScroll(event: any): void {
+  //   const scrollPosition = window.scrollY;
+  //   const isScrollingDown = scrollPosition > this.lastScrollPosition;
 
-    if (isScrollingDown && this.isScrollingDownToBottom(scrollPosition)) {
-      // Scroll to the hidden element in the next component
-      this.scrollToTopElement.nativeElement.scrollIntoView({ behavior: 'smooth' });
-      this.router.navigate(['/about-me']);
-    }
+  //   if (isScrollingDown && this.isScrollingDownToBottom(scrollPosition)) {
+  //     // Scroll to the hidden element in the next component
+  //     this.scrollToTopElement.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  //     this.router.navigate(['/about-me']);
+  //   }
 
-    this.lastScrollPosition = scrollPosition;
-  }
+  //   this.lastScrollPosition = scrollPosition;
+  // }
 
-  private isScrollingDownToBottom(scrollPosition: number): boolean {
-    return scrollPosition >= document.body.offsetHeight - window.innerHeight;
-  }
+  // private isScrollingDownToBottom(scrollPosition: number): boolean {
+  //   return scrollPosition >= document.body.offsetHeight - window.innerHeight;
+  // }
 }
