@@ -15,11 +15,7 @@ export class BackToTopComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.showBackToTop = window.scrollY > 0;
-    console.log('Scroll position:', window.scrollY);
-    console.log('Show back-to-top:', this.showBackToTop);
-    
-    // Explicitly trigger change detection
-    this.cdr.detectChanges();
+     this.cdr.detectChanges();
   }
 
   scrollToTop() {

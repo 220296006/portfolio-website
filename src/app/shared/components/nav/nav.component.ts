@@ -1,24 +1,16 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ScrollService } from '../../services/scroll.service';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-  isSticky: boolean = false;
-
-    // Implement your scroll logic here
-    @HostListener('window:scroll', ['$event'])
-    checkScroll() {
-      const scrollPosition = window.scrollY;
+  constructor(private scrollService: ScrollService) {}
   
-      if (scrollPosition >= 100) {
-        this.isSticky = true;
-      } else {
-        this.isSticky = false;
-      }
-    }
+  scrollToSection(sectionId: string): void {
+    this.scrollService.scrollToSection(sectionId);
+  }
 
-  // Add other component logic here
   }

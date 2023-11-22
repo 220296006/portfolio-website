@@ -11,13 +11,13 @@ import { ServicesComponent } from './components/services/services.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { MatIconModule } from '@angular/material/icon';
-import { LoginComponent } from './shared/components/login/login.component';
 import { NavComponent } from './shared/components/nav/nav.component';
 import { PharmacyappComponent } from './components/pharmacyapp/pharmacyapp.component';
 import { TheebestprojectComponent } from './components/theebestproject/theebestproject.component';
 import { RouterModule } from '@angular/router';
 import { VpbankappComponent } from './components/vpbankapp/vpbankapp.component';
 import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
+import { ScrollService } from './shared/services/scroll.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,6 @@ import { BackToTopComponent } from './components/back-to-top/back-to-top.compone
     ServicesComponent,
     PortfolioComponent,
     ContactComponent,
-    LoginComponent,
     PharmacyappComponent,
     TheebestprojectComponent,
     VpbankappComponent,
@@ -42,7 +41,7 @@ import { BackToTopComponent } from './components/back-to-top/back-to-top.compone
     MatIconModule,
     RouterModule
   ],
-  providers: [],
+  providers: [ScrollService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
