@@ -17,6 +17,7 @@ import { PharmacyappComponent } from './components/pharmacyapp/pharmacyapp.compo
 import { TheebestprojectComponent } from './components/theebestproject/theebestproject.component';
 import { RouterModule } from '@angular/router';
 import { VpbankappComponent } from './components/vpbankapp/vpbankapp.component';
+import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { VpbankappComponent } from './components/vpbankapp/vpbankapp.component';
     PharmacyappComponent,
     TheebestprojectComponent,
     VpbankappComponent,
+    BackToTopComponent,
   ],
   imports: [
     BrowserModule,

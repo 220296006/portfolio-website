@@ -1,0 +1,31 @@
+import { Component, HostListener, ChangeDetectorRef } from '@angular/core';
+
+@Component({
+  selector: 'app-back-to-top',
+  templateUrl: './back-to-top.component.html',
+  styleUrls: ['./back-to-top.component.scss']
+})
+export class BackToTopComponent {
+  showBackToTop: boolean = true;
+
+  constructor(private cdr: ChangeDetectorRef) {
+    console.log('BackToTopComponent created');
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.showBackToTop = window.scrollY > 0;
+    console.log('Scroll position:', window.scrollY);
+    console.log('Show back-to-top:', this.showBackToTop);
+    
+    // Explicitly trigger change detection
+    this.cdr.detectChanges();
+  }
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+}

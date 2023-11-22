@@ -25,12 +25,4 @@ export class HomeComponent implements OnInit {
       });
     }
   }
-
-  scrollToAbout() {
-    // Get a reference to the About section by its id
-    const aboutSection = this.elementRef.nativeElement.querySelector('#about-me');
-
-    // Scroll to the About section
-    aboutSection.scrollIntoView({ behavior: 'smooth' });
-  }
 }
