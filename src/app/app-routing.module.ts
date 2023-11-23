@@ -12,7 +12,6 @@ import { TheebestprojectComponent } from './components/theebestproject/theebestp
 import { VpbankappComponent } from './components/vpbankapp/vpbankapp.component';
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', component: HomeComponent},
   {path: 'home', pathMatch: 'full', component: HomeComponent},
   {path: 'nav', pathMatch: 'full', component:NavComponent},
   {path: 'about-me', pathMatch: 'full', component: AboutMeComponent},
