@@ -19,6 +19,7 @@ import { RouterModule } from '@angular/router';
 import { VpbankappComponent } from './components/vpbankapp/vpbankapp.component';
 import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
 import { ScrollService } from './shared/services/scroll.service';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ScrollService } from './shared/services/scroll.service';
     TheebestprojectComponent,
     VpbankappComponent,
     BackToTopComponent,
+    TestimonialsComponent,
   ],
   imports: [
     BrowserModule,

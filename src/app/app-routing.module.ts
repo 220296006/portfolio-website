@@ -10,6 +10,7 @@ import { NavComponent } from './shared/components/nav/nav.component';
 import { PharmacyappComponent } from './components/pharmacyapp/pharmacyapp.component';
 import { TheebestprojectComponent } from './components/theebestproject/theebestproject.component';
 import { VpbankappComponent } from './components/vpbankapp/vpbankapp.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 const routes: Routes = [
   {path: 'home', pathMatch: 'full', component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'services', pathMatch: 'full', component: ServicesComponent},
   {path: 'resume', pathMatch: 'full', component: ResumeComponent},
   {path: 'contact', pathMatch: 'full', component: ContactComponent},
+  {path: 'testimonials', pathMatch: 'full', component: TestimonialsComponent},
   {path: 'portfolio', pathMatch: 'full', component: PortfolioComponent},
   {path: 'portfolio-pharmacyapp', pathMatch: 'full', component: PharmacyappComponent},
   {path: 'portfolio-theebestproject', pathMatch: 'full', component: TheebestprojectComponent},
