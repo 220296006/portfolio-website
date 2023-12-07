@@ -19,7 +19,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
 export class TestimonialsComponent implements OnInit {
   testimonials: any[] = [
     {
-      quote: "Without a doubt Thabiso is one of the talented programmers, trustworthy and professional. His advice has helped me to grow as well in the field.",
+      quote: "Mr Matsaba, is not only smart, hardoworking and dedicated, but he proved that in his work also.",
       image: "assets/images/Tiyani.jpeg",
       name: "Tiyani Baloyi",
       designation: "Senior Software Engineer, South African Radio and Astronomy Observatory (SARAO)"
