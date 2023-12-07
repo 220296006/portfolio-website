@@ -14,47 +14,26 @@
         <h2>Testimonials</h2>
         <p>Check out below what the people I have met and collaborated with have to say about me</p>
       </div>
-  
-      <div class="testimonials-container" data-aos="fade-up" data-aos-delay="100" [@slide]="slide()">
-        <div class="testimonial-item" data-aos="fade-up">
+      <div class="testimonials-container">
+        <div *ngFor="let testimonial of testimonials; let i = index" class="testimonial-item"
+             [@slide]="{ value: selectedIndex === i ? 0 : '100%', params: { from: selectedIndex === i ? '100%' : 0, to: 0 } }"
+             [@fade]="i === selectedIndex ? 'visible' : 'hidden'">
           <p>
             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-            "Thabiso is a good programmer, great team-player and works well under pressure."
+            {{ testimonial.quote }}
             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
           </p>
-          <img src="assets/images/Luvo.PNG" class="testimonial-img" alt="">
-          <h3>Luvo Ntshwela</h3>
-          <h4>Junior Software Developer, Entelect</h4>
-        </div>
-  
-        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-          <p>
-            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-            "Without a doubt Thabiso is one of the talented programmers, trustworthy and professional. His advices have helped me to grow as well in the field."
-            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-          </p>
-          <img src="assets/images/Vuyo.jpg" class="testimonial-img" alt="">
-          <h3>Vuyolwethu Mfidi</h3>
-          <h4>Junior Software Developer, Uvu Africa:CapaCiti</h4>
+          <img [src]="testimonial.image" class="testimonial-img" alt="">
+          <h3>{{ testimonial.name }}</h3>
+          <h4>{{ testimonial.designation }}</h4>
         </div>
       </div>
 
-      <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-        <p>
-          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-          "Without a doubt Thabiso is one of the talented programmers, trustworthy and professional. His advices have helped me to grow as well in the field."
-          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-        </p>
-        <img src="assets/images/Vuyo.jpg" class="testimonial-img" alt="">
-        <h3>Tiyani Baloyi</h3>
-        <h4>Senior Software Engineer, South African Radio and Astronomy Observatory (SARAO)</h4>
-      </div>
-    </div>
-  
       <div class="pagination">
         <span *ngFor="let testimonial of testimonials; let i = index" (click)="selectTestimonial(i)" [class.active]="i === selectedIndex"></span>
       </div>
-  </section><!-- End Testimonials Section -->  
+    </div>
+  </section>
 </body>
 
 </html>
