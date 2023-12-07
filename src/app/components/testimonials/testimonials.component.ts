@@ -1,3 +1,5 @@
+// testimonials.component.ts
+
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
@@ -6,20 +8,11 @@ import { trigger, transition, style, animate } from '@angular/animations';
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.scss'],
   animations: [
-    trigger('fade', [
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate('500ms', style({ opacity: 1 })),
-      ]),
-      transition(':leave', [
-        animate('500ms', style({ opacity: 0 })),
-      ]),
-    ]),
     trigger('slide', [
       transition('* => *', [
-        style({ transform: 'translateX({{ from }})' }),
-        animate('500ms ease-in-out', style({ transform: 'translateX({{ to }})' })),
-      ], { params: { from: '100%', to: '0%' } })
+        style({ transform: 'translateX({{ from }}%)' }),
+        animate('500ms ease-in-out', style({ transform: 'translateX({{ to }}%)' })),
+      ], { params: { from: 0, to: 0 } })
     ]),
   ],
 })
@@ -30,7 +23,7 @@ export class TestimonialsComponent implements OnInit {
       image: "assets/images/Tiyani.jpeg",
       name: "Tiyani Baloyi",
       designation: "Senior Software Engineer, South African Radio and Astronomy Observatory (SARAO)"
-    },    
+    },
     {
       quote: "Thabiso is a good programmer, great team-player and works well under pressure.",
       image: "assets/images/Luvo.PNG",
@@ -48,17 +41,8 @@ export class TestimonialsComponent implements OnInit {
   selectedIndex = 0;
 
   ngOnInit(): void {
-    window.onload = () => {
-      this.showTestimonial();
-
-      // Switch to the next testimonial after 5 seconds
-      setTimeout(() => this.nextTestimonial(), 5000);
-    };
-  }
-
-  showTestimonial(): void {
-    // Initially show the first testimonial at the center
-    this.selectedIndex = 0;
+    // Automatically switch testimonials every 5 seconds
+    setInterval(() => this.nextTestimonial(), 5000);
   }
 
   selectTestimonial(index: number): void {
@@ -66,17 +50,13 @@ export class TestimonialsComponent implements OnInit {
   }
 
   nextTestimonial(): void {
-    // Move to the next testimonial
     this.selectedIndex = (this.selectedIndex + 1) % this.testimonials.length;
-
-    // Switch to the next testimonial after 5 seconds
-    setTimeout(() => this.nextTestimonial(), 5000);
   }
 
-  slide(from: number, to: number) {
-    return {
-      value: 0,
-      params: { from, to }
-    };
-  }  
+  slide() {
+    const from = this.selectedIndex === 0 ? (this.testimonials.length - 1) * 100 : (this.selectedIndex - 1) * 100;
+    const to = this.selectedIndex * 100;
+
+    return { value: 0, params: { from, to } };
+  }
 }

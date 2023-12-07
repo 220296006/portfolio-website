@@ -14,10 +14,8 @@
         <h2>Testimonials</h2>
         <p>Check out below what the people I have met and collaborated with have to say about me</p>
       </div>
-      <div class="testimonials-container">
-        <div *ngFor="let testimonial of testimonials; let i = index" class="testimonial-item"
-             [@slide]="{ value: selectedIndex === i ? 0 : '100%', params: { from: selectedIndex === i ? '100%' : 0, to: 0 } }"
-             [@fade]="i === selectedIndex ? 'visible' : 'hidden'">
+      <div class="testimonials-container" [@slide]="slide()">
+        <div *ngFor="let testimonial of testimonials; let i = index" class="testimonial-item">
           <p>
             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
             {{ testimonial.quote }}
@@ -28,7 +26,7 @@
           <h4>{{ testimonial.designation }}</h4>
         </div>
       </div>
-
+  
       <div class="pagination">
         <span *ngFor="let testimonial of testimonials; let i = index" (click)="selectTestimonial(i)" [class.active]="i === selectedIndex"></span>
       </div>
