@@ -14,16 +14,18 @@
         <h2>Testimonials</h2>
         <p>Check out below what the people I have met and collaborated with have to say about me</p>
       </div>
-      <div class="testimonials-container" [@slide]="slide()">
-        <div *ngFor="let testimonial of testimonials; let i = index" class="testimonial-item">
-          <p>
-            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-            {{ testimonial.quote }}
-            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-          </p>
-          <img [src]="testimonial.image" class="testimonial-img" alt="">
-          <h3>{{ testimonial.name }}</h3>
-          <h4>{{ testimonial.designation }}</h4>
+      <div class="testimonials-container">
+      <div *ngFor="let testimonial of testimonials; let i = index" class="testimonial-item" [@fade]="i === selectedIndex ? 'visible' : 'hidden'" [@slide]="i - selectedIndex">
+          <div>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              {{ testimonial.quote }}
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img [src]="testimonial.image" class="testimonial-img" alt="">
+            <h3>{{ testimonial.name }}</h3>
+            <h4>{{ testimonial.designation }}</h4>
+          </div>
         </div>
       </div>
   
@@ -32,6 +34,6 @@
       </div>
     </div>
   </section>
-</body>
 
+</body>
 </html>
