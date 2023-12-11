@@ -1,6 +1,26 @@
 // /* You can add global styles to this file, and also import other style files */
 body {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: #272829;
+}
+
+a {
+  color: #149ddd;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #37b3ed;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
 }
 
 
@@ -149,3 +169,8 @@ section {
 html {
   scroll-behavior: smooth;
 }
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";

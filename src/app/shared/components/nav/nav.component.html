@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navigation</title>
   </head>
-  <!-- Navigation Bar -->
   <body>
     <nav class="navbar navbar-expand-lg  fixed-top">
       <div class="container-fluid">
@@ -29,77 +28,50 @@
         </button>
         <div class="collapse navbar-collapse justify-content-center nav-underline" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0 align-center">
+            <!-- Update mat-icon to use boxicons class -->
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" routerLink="/home" >
-                <mat-icon
-                  aria-hidden="false"
-                  aria-label="home icon"
-                  fontIcon="home"
-                ></mat-icon>
+              <a class="nav-link" aria-current="page" routerLink="/home">
+                <i class='bx bx-home'></i> <!-- Boxicon home icon -->
                 Home
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/about-me"  >
-                <mat-icon
-                  aria-hidden="false"
-                  aria-label="account_circle icon"
-                  fontIcon="account_circle"
-                ></mat-icon
-                >About</a
-              >
+              <a class="nav-link" routerLink="/about-me">
+                <i class='bx bx-user'></i> <!-- Boxicon account_circle icon -->
+                About
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/resume"  >
-                <mat-icon
-                  aria-hidden="false"
-                  aria-label="assignment icon "
-                  fontIcon="assignment"
-                ></mat-icon
-                >Resume</a
-              >
+              <a class="nav-link" routerLink="/resume">
+                <i class='bx bx-file'></i> <!-- Boxicon file icon -->
+                Resume
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/services" >
-                <mat-icon
-                  aria-hidden="false"
-                  aria-label="build icon"
-                  fontIcon="build"
-                ></mat-icon
-                >Services</a
-              >
+              <a class="nav-link" routerLink="/services">
+                <i class='bx bx-wrench'></i> <!-- Boxicon wrench icon -->
+                Services
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/portfolio" >
-                <mat-icon
-                  aria-hidden="false"
-                  aria-label="folder icon"
-                  fontIcon="folder"
-                ></mat-icon
-                >Portfolio</a
-              >
+              <a class="nav-link" routerLink="/portfolio">
+                <i class='bx bx-folder'></i> <!-- Boxicon folder icon -->
+                Portfolio
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/testimonials" >
-                <mat-icon
-                  aria-hidden="false"
-                  aria-label="feedback icon"
-                  fontIcon="feedback"
-                ></mat-icon
-                >Testimonials</a
-              >
+              <a class="nav-link" routerLink="/testimonials">
+                <i class='bx bx-message-dots'></i> <!-- Boxicon message-dots icon -->
+                Testimonials
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/contact" >
-                <mat-icon
-                  aria-hidden="false"
-                  aria-label="email icon"
-                  fontIcon="email"
-                ></mat-icon
-                >Contact</a
-              >
+              <a class="nav-link" routerLink="/contact">
+                <i class='bx bx-mail-send'></i> <!-- Boxicon mail-send icon -->
+                Contact
+              </a>
             </li>
-        </ul>
+          </ul>
         </div>
         <form class="d-flex">
           <input
