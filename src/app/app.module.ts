@@ -20,6 +20,7 @@ import { VpbankappComponent } from './components/vpbankapp/vpbankapp.component';
 import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
 import { ScrollService } from './shared/services/scroll.service';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
     VpbankappComponent,
     BackToTopComponent,
     TestimonialsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
