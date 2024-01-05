@@ -21,6 +21,7 @@ import { BackToTopComponent } from './components/back-to-top/back-to-top.compone
 import { ScrollService } from './shared/services/scroll.service';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DarkModeService } from './shared/services/darkmode.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { FooterComponent } from './components/footer/footer.component';
     RouterModule,
     HttpClientModule,
   ],
-  providers: [ScrollService],
+  providers: [ScrollService, DarkModeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

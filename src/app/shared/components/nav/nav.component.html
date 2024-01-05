@@ -71,8 +71,14 @@
                 Contact
               </a>
             </li>
+            <!-- <li class="nav-item">
+              <button (click)="toggleDarkMode()">
+                <i *ngIf="!darkModeService.isDarkMode()" class='bx bx-moon'></i>
+                <i *ngIf="darkModeService.isDarkMode()" class='bx bx-sun'></i>
+
+              </button>
+            </li> -->
           </ul>
-        </div>
         <form class="d-flex">
           <input
             class="form-control me-2"
@@ -84,6 +90,7 @@
             Search
           </button>
         </form>
+      </div>
       </div>
     </nav>
   </body>

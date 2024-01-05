@@ -1,11 +1,15 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { ScrollService } from '../../services/scroll.service';
+import { Component } from '@angular/core';
+import { DarkModeService } from '../../services/darkmode.service';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-  
+
+  constructor(public darkModeService: DarkModeService) {}
+
+  toggleDarkMode(): void {
+    this.darkModeService.toggleDarkMode();
+  }
   }
