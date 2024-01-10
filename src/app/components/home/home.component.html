@@ -5,13 +5,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
+  <style>
+    #home {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background-image: url('assets/images/Shaun.jpg'); /* Adjust the path accordingly */
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    /* Style the overlay container */
+    #home::before {
+      content: "";
+      background: rgba(5, 13, 24, 0.3);
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    /* Style the content container */
+    #home .image-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 6;
+      text-align: center;
+      width: 100%;
+      padding: 20px;
+    }
+
+    /* Style the title */
+    #home h1 {
+      margin: 0 0 10px 0;
+      font-size: 59px;
+      font-weight: 700;
+      line-height: 56px;
+      color: #fff;
+    }
+
+    /* Style the paragraph text */
+    #home p {
+      color: #fff;
+      margin-bottom: 20px;
+      /* Adjust margin as needed */
+      font-size: 26px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* Style the typed text */
+    #home p span.typed {
+      color: #fff;
+      padding-bottom: 4px;
+      letter-spacing: 1px;
+      border-bottom: 3px solid #149ddd;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body>
   <!-- Image  -->
   <section id="home">
-    <div class="image">
-    </div>
+    <div class="image"></div>
     <div class="image-container" data-aos="fade-in">
       <h1>Thabiso Matsaba</h1>
       <p>
@@ -21,8 +85,9 @@
     </div>
   </section>
 
-  <div #scrollToTopElement style="position: fixed; top: 0;"></div>
+  <div id="scrollToTopElement" style="position: fixed; top: 0;"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 </html>
