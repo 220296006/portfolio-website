@@ -14,10 +14,10 @@ export class ContactComponent {
 
   sendEmail() {
     const emailData = {
-      name: String,
-      email: String,
-      subject: String,
-      message: String
+      name: 'John Doe', // Replace with the actual name from your form
+      email: 'john.doe@example.com', // Replace with the actual email from your form
+      subject: 'Contact Form Submission', // Replace with the actual subject from your form
+      message: 'This is a test message.' // Replace with the actual message from your form
     };
 
     this.loading = true;
@@ -29,6 +29,9 @@ export class ContactComponent {
         },
         error: (error: any) => {
           console.error('Error sending email:', error);
+        },
+        complete: () => {
+          this.loading = false;
         }
       });
   }

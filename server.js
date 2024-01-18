@@ -2,12 +2,13 @@ const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors()); // Enable CORS for all routes
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true })); // <-- Change this line
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 app.post('/send-email', (req, res) => {
   console.log('Received email request:', req.body);
@@ -39,5 +40,9 @@ app.post('/send-email', (req, res) => {
 
     // Send a response to the client
     res.status(200).json({ success: true, message: 'Email sent successfully!' });
+  });
+
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
   });
 });
