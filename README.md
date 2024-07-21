@@ -8,8 +8,7 @@ This is the README file for my personal portfolio website. It provides an overvi
 
 - **Frontend**: Angular TypeScript, Bootstrap 5, HTML 5 & CSS 3
 - **Backend**: Node.js
-- **Database**: [Database Name]
-- **Deployment**: GitHub Pages
+- **Deployment**: Firebase
 
 ## Backend
 
